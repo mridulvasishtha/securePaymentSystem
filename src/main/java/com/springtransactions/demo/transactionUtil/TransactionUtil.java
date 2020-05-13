@@ -25,7 +25,7 @@ public class TransactionUtil {
         this.accountsRepo = accountsRepo;
     }
 
-    // @Transactional(propagation = Propagation.REQUIRED, readOnly = false, rollbackFor = RuntimeException.class)
+    //@Transactional(propagation = Propagation.REQUIRED, readOnly = false, rollbackFor = RuntimeException.class)
     @Transactional(propagation = Propagation.SUPPORTS)
     public boolean  registerTransaction(Integer staffId1, Integer staffId2, Double amount) {
         Transactions t1 = new Transactions(new Date(), amount, staffId1, staffId2);
