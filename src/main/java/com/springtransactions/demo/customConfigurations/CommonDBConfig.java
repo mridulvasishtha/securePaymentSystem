@@ -65,5 +65,4 @@ public class CommonDBConfig {
 		transactionManager.setEntityManagerFactory(userEntityManager().getObject());
 		return transactionManager;
 	}
-
 }

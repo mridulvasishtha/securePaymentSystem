@@ -13,7 +13,7 @@ public class StaffService {
         this.accountsRepo = accountsRepo;
     }
     public String addStaff(AddStaffRequestModel addStaffRequestModel){
-        accountsRepo.save(new Account(addStaffRequestModel.getPhoneNumber(),addStaffRequestModel.getFirstName(),addStaffRequestModel.getLastName(),addStaffRequestModel.getStaffId(),addStaffRequestModel.getBalance()));
-        return "Success!!!";
+        return accountsRepo.save(new Account(addStaffRequestModel.getPhoneNumber(),addStaffRequestModel.getFirstName(),
+                addStaffRequestModel.getLastName(),addStaffRequestModel.getStaffId(),addStaffRequestModel.getBalance())).toString();
     }
 }
